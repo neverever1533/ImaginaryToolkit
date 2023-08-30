@@ -290,10 +290,6 @@ public class ImageLayer {
 
 	public void setImagePath(String filePath) {
 		imagePathLayer = filePath;
-		if (null != filePath) {
-			File file = new File(filePath);
-			setObject(file.getName());
-		}
 	}
 
 	public void setLocation(double tx, double ty) {
@@ -312,6 +308,8 @@ public class ImageLayer {
 
 	public void setName(String name) {
 		nameLayer = name;
+		name = name + "@" + this.hashCode();
+		setObject(name);
 	}
 
 	public void setObject(Object object) {
