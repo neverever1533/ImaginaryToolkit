@@ -50,7 +50,7 @@ public class PSDFileReader {
 							name = String.valueOf(i);
 						}
 						suffix = ImageIOUtils.FileSuffixes_Default;
-						fileTemp = fileUtils.getFileReplace(file, name, suffix);
+						fileTemp = fileUtils.getFileReplaceName(file, name, suffix);
 						imageLayer = new ImageLayer();
 						imageLayer.setName(name);
 						imageLayer.setSuffix(suffix);
